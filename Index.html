@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wessex Fabrications Ltd | Architectural & Structural Steelwork</title>
+  <meta name="description" content="Architectural and structural steelwork: design, fabrication, and installation across the South West. Frames, staircases, balconies, balustrades, gates and on-site welding." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#0b1220;           /* deep navy */
+      --card:#101827;         /* card panel */
+      --ink:#e5eefc;          /* primary text */
+      --muted:#9fb0cc;        /* secondary text */
+      --brand:#d6b35b;        /* warm brass/gold accent */
+      --line:#1c2741;         /* divider */
+      --ring:rgba(214,179,91,.3);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(214,179,91,.15), transparent 60%),
+        radial-gradient(900px 500px at 110% -20%, rgba(80,130,250,.12), transparent 60%),
+        var(--bg);
+      letter-spacing:.2px;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1150px;margin:auto;padding:28px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:8px 0 24px;border-bottom:1px solid var(--line);
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:42px;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.35))}
+    .brand .name{font-weight:700;letter-spacing:.3px}
+    .tag{color:var(--muted);font-size:.95rem}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:12px 18px;border-radius:12px;border:1px solid var(--line);
+      background:linear-gradient(180deg,#0f192d,#0b1220);color:var(--ink);
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      box-shadow:0 6px 20px rgba(0,0,0,.25);
+    }
+    .btn:hover{transform:translateY(-2px);border-color:var(--ring);box-shadow:0 10px 28px rgba(0,0,0,.35)}
+    .btn.primary{background:linear-gradient(180deg,#e6c874,#caa44d);color:#0c1020;border-color:rgba(0,0,0,.25)}
+    .btn.ghost{background:transparent}
+    /* HERO */
+    .hero{padding:48px 0 28px;display:grid;gap:18px}
+    .eyebrow{color:var(--brand);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
+    h1{margin:0;font-size:clamp(28px,6vw,46px);line-height:1.15;letter-spacing:.2px}
+    .lead{color:var(--muted);max-width:72ch;margin-top:6px}
+    /* STRIP */
+    .strip{
+      margin:22px 0 8px;padding:10px 14px;border:1px dashed var(--line);
+      border-radius:12px;color:var(--muted);font-size:.92rem
+    }
+    /* SECTIONS */
+    section{padding:28px 0}
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    @media(min-width:920px){ .grid.cols-4{grid-template-columns:repeat(4,1fr)} }
+    .card{
+      background:linear-gradient(180deg,#111a2c,#0d1526);
+      border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover{transform:translateY(-3px);border-color:var(--ring);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+    .card h3{margin:.1rem 0 .35rem;font-size:1.08rem}
+    .muted{color:var(--muted)}
+    .kicker{color:var(--brand);font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted)}
+    /* PROCESS */
+    .steps{counter-reset:step}
+    .step:before{
+      counter-increment:step;content:counter(step);
+      display:inline-grid;place-items:center;height:28px;width:28px;border-radius:8px;
+      background:rgba(214,179,91,.18);color:var(--brand);font-weight:700;margin-right:10px
+    }
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);margin-top:26px;padding:22px 0 36px;color:var(--muted);font-size:.95rem}
+    .small{font-size:.9rem;color:var(--muted)}
+    /* Entry animations */
+    [data-reveal]{opacity:0;transform:translateY(10px);transition:opacity .5s ease, transform .5s ease}
+    [data-reveal].in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="logo.svg" alt="Wessex Fabrications Ltd logo" onerror="this.style.display='none';document.getElementById('logoText').style.display='block'">
+        <div>
+          <div class="name" id="logoText" style="display:none">Wessex Fabrications Ltd</div>
+          <div class="tag">Architectural & Structural Steelwork</div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn ghost" href="tel:[YOUR-PHONE]">Call</a>
+        <a class="btn primary" href="mailto:[YOUR-EMAIL]?subject=Quote%20Request%20–%20Wessex%20Fabrications">Request a Quote</a>
+      </div>
+    </header>
+
+    <section class="hero" data-reveal>
+      <div class="eyebrow">Built on precision. Delivered on time.</div>
+      <h1>Specialists in Architectural & Structural Steelwork for Contractors and Homeowners</h1>
+      <p class="lead">
+        From single RSJs to full frames, bespoke staircases to balcony packages—our team handles
+        design, fabrication, installation and handover with a quality-first approach.
+      </p>
+      <div class="strip">Method statements & RAMS ▪ UKCA/CE to spec (EXC2) ▪ Fully insured ▪ CSCS-certified installers</div>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:[YOUR-EMAIL]?subject=Quote%20Request%20–%20Wessex%20Fabrications">Get a fast quote</a>
+        <a class="btn" href="#services">View services</a>
+      </div>
+    </section>
+
+    <section id="services" data-reveal>
+      <div class="kicker">What we do</div>
+      <h2 style="margin:.3rem 0 1rem">End-to-end steelwork packages</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Structural Frames & Beams</h3><p class="muted">Portal frames, RSJs, goalposts, mezzanines and builder’s steelwork—site measured and installed.</p></div>
+        <div class="card"><h3>Staircases & Balustrades</h3><p class="muted">Mild steel and stainless stairs with timber or glass; internal & external; supply only or full install.</p></div>
+        <div class="card"><h3>Balconies & Juliet Balconies</h3><p class="muted">Cantilevered, bolt-on and free-standing systems with galvanized and powder-coated finishes.</p></div>
+        <div class="card"><h3>Gates, Railings & Handrails</h3><p class="muted">Security and decorative metalwork for residential and commercial sites.</p></div>
+        <div class="card"><h3>Secondary Steelwork</h3><p class="muted">Ladders, walkways, plant bases, trims and brackets fabricated to drawing or site template.</p></div>
+        <div class="card"><h3>On-Site Welding & Repairs</h3><p class="muted">Mobile welding and remedial works with tidy, compliant finishes.</p></div>
+      </div>
+    </section>
+
+    <section data-reveal>
+      <div class="kicker">How we work</div>
+      <h2 style="margin:.3rem 0 1rem">A clear, accountable process</h2>
+      <div class="grid cols-4 steps">
+        <div class="card step">
+          <h3>Survey & Design</h3>
+          <ul class="list">
+            <li>Site measure or work to supplied drawings</li>
+            <li>GA drawings and connection details as required</li>
+          </ul>
+        </div>
+        <div class="card step">
+          <h3>Fabrication</h3>
+          <ul class="list">
+            <li>Weld procedures to specification</li>
+            <li>Galvanized / prime & powder coat finishes</li>
+          </ul>
+        </div>
+        <div class="card step">
+          <h3>Installation</h3>
+          <ul class="list">
+            <li>Program-driven installs with RAMS and lift plans</li>
+            <li>Co-ordination with other trades</li>
+          </ul>
+        </div>
+        <div class="card step">
+          <h3>Handover</h3>
+          <ul class="list">
+            <li>Inspection records and O&M documentation</li>
+            <li>Snag-free sign-off</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal>
+      <div class="kicker">Recent work</div>
+      <h2 style="margin:.3rem 0 1rem">Selected projects</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Commercial Frame, Poole</h3><p class="muted">Supply and install of portal frame with mezzanine steel, stairs and balustrades.</p></div>
+        <div class="card"><h3>Residential Stair, Winchester</h3><p class="muted">Bespoke steel spine stair with oak treads and glass balustrade.</p></div>
+        <div class="card"><h3>Juliet Balconies, Salisbury</h3><p class="muted">Powder-coated mild steel Juliets to a 26-plot development.</p></div>
+      </div>
+    </section>
+
+    <section class="card" data-reveal>
+      <h2 style="margin:.2rem 0 0.6rem">Ready to price your project?</h2>
+      <p class="muted" style="margin-top:-4px">Attach drawings or a rough sketch—turnarounds usually within 24–48 hours.</p>
+      <div class="cta-row" style="margin-top:8px">
+        <a class="btn primary" href="mailto:[YOUR-EMAIL]?subject=Quote%20Request%20–%20Wessex%20Fabrications">Email drawings</a>
+        <a class="btn ghost" href="tel:[YOUR-PHONE]">Speak to estimating</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="grid">
+        <div>
+          <strong>Wessex Fabrications Ltd</strong><br/>
+          <span class="small">Serving Dorset, Hampshire, Wiltshire and Somerset</span><br/><br/>
+          <span class="small">Email: <a href="mailto:[YOUR-EMAIL]">[YOUR-EMAIL]</a>  •  Tel: <a href="tel:[YOUR-PHONE]">[YOUR-PHONE]</a></span>
+        </div>
+        <div class="small">© <span id="y"></span> Wessex Fabrications Ltd. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Reveal on scroll (subtle)
+    const io=new IntersectionObserver(es=>es.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    }),{threshold:.08});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
